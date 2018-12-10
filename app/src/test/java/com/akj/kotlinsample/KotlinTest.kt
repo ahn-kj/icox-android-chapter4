@@ -156,4 +156,11 @@ class KotlinTest {
         // flatmap 으로 리스트를 평평하게 만들고 변환한다.
         println(list2.flatMap { it.toList() })
     }
+
+    @Test
+    fun testExtensions(){
+        val str = "Hello, Extensions"
+        // lastString() 함수를 원래 String 클래스의 메소드처럼 사용  가능
+        Assert.assertEquals("s", str.lastString())
+    }
 }
