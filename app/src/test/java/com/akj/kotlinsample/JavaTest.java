@@ -123,4 +123,11 @@ public class JavaTest {
 
         Assert.assertEquals(fruitJava1.hashCode(), fruitJava2.hashCode());
     }
+
+    @Test
+    public void testExtFunc() {
+        // 자바에서 확장함수는 최상위 함수 호출과 같음
+        String lastString = StringExtKt.lastString("apple");
+        Assert.assertEquals("e", lastString);
+    }
 }
