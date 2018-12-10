@@ -22,10 +22,12 @@
         <activity
                 android:name=".BmiKotlinActivity"
                 android:label="BmiKotlinActivity"/>
-        <activity android:name=".VariableJavaActivity">
-        </activity>
-        <activity android:name=".VariableKotlinActivity">
-        </activity>
+        <activity
+                android:name=".VariableJavaActivity"
+                android:label="VariableJavaActivity" />
+        <activity
+                android:name=".VariableKotlinActivity"
+                android:label="VariableKotlinActivity" />
     </application>
 
 </manifest>
