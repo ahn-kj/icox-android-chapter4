@@ -24,10 +24,16 @@
                 android:label="BmiKotlinActivity"/>
         <activity
                 android:name=".VariableJavaActivity"
-                android:label="VariableJavaActivity" />
+                android:label="VariableJavaActivity"/>
         <activity
                 android:name=".VariableKotlinActivity"
-                android:label="VariableKotlinActivity" />
+                android:label="VariableKotlinActivity"/>
+        <activity
+                android:name=".ControlJavaActivity"
+                android:label="ControlJavaActivity"/>
+        <activity
+                android:name=".ControlKotlinActivity"
+                android:label="ControlKotlinActivity"/>
     </application>
 
 </manifest>
