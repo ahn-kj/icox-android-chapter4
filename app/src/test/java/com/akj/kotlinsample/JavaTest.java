@@ -130,4 +130,19 @@ public class JavaTest {
         String lastString = StringExtKt.lastString("apple");
         Assert.assertEquals("e", lastString);
     }
+
+    @Test
+    public void testNPE1() {
+        NPE npe = new NPE();
+        // 3글자에 단어를 함수에 전달해 결과 테스트
+        Assert.assertEquals(3, npe.strLen("abc"));
+
+        // Null 을 전달할때 테스트
+        Assert.assertEquals(0, npe.strLen(null));
+    }
+
+    @Test
+    public void testNullType() {
+        Assert.assertEquals(true, null instanceof String);
+    }
 }
