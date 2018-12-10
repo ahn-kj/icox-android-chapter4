@@ -18,10 +18,14 @@
         </activity>
         <activity
                 android:name=".BmiJavaActivity"
-                android:label="BmiJavaActivity" />
+                android:label="BmiJavaActivity"/>
         <activity
                 android:name=".BmiKotlinActivity"
-                android:label="BmiKotlinActivity" />
+                android:label="BmiKotlinActivity"/>
+        <activity android:name=".VariableJavaActivity">
+        </activity>
+        <activity android:name=".VariableKotlinActivity">
+        </activity>
     </application>
 
 </manifest>
