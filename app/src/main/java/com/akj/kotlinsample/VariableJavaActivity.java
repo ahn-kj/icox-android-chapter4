@@ -14,7 +14,7 @@ public class VariableJavaActivity extends AppCompatActivity {
     // 버튼이 클릭된 횟수를 저장할 변수
     int clickCount = 0;
     // Activity 의 시작시간을 저장하는 변수
-    long startTime = System.currentTimeMillis();
+    final long startTime = System.currentTimeMillis();
     // Activity 시작 시간을 보여주는 TextView
     TextView startTimeLabel;
     // 클릭된 횟수를 보여주는 TextView
