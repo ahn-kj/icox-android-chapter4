@@ -1,13 +1,14 @@
 package com.akj.kotlinsample;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class ControlJavaActivity extends AppCompatActivity {
+
     // 불필요한 findViewById 함수를 피하기 위해 UI 요소를 멤버 변수로 가지고 있는다.
     EditText numberField;
     Button button;
@@ -27,18 +28,27 @@ public class ControlJavaActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // numberField 의 값을 읽어 int 형으로 변환한다.
                 int number = Integer.parseInt(numberField.getText().toString());
-                // if, else if, else 문으로 2의 배수, 3의 배수를 체크해 서로 다른 토스트 메세지를 보여준다.
+
+                //  if, else if, else 문으로 2의 배수, 3의 배수를 체크해 서로 다른 토스트 메세지를 보여준다.
                 if (number % 2 == 0) {
-                    Toast.makeText(getApplicationContext(), "" + number + " 는 2의 배수입니다.", Toast.LENGTH_SHORT).show();
+                    ToastUtilJava.toastShort("" + number + " 는  2의 배수입니다.");
+                    ToastUtilJava.toast("" + number + " 는  2의 배수입니다.", Toast.LENGTH_LONG);
+                    ToastUtilJava.toast("" + number + " 는  2의 배수입니다.");
+
                 } else if (number % 3 == 0) {
-                    Toast.makeText(getApplicationContext(), "" + number + "는 3 의 배수입니다.", Toast.LENGTH_SHORT).show();
+                    ToastUtilJava.toastShort("" + number + " 는  3의 배수입니다.");
                 } else {
-                    Toast.makeText(getApplicationContext(), "" + number, Toast.LENGTH_SHORT).show();
+                    ToastUtil.toastShort("" + number);
                 }
 
                 // switch 문으로 체크후 버튼의 텍스트를 변경한다.
                 switch (number) {
+                    // 1 ~ 4 까지는 같은 코드를 실행한다.
+                    case 1:
+                    case 2:
+                    case 3:
                     case 4:
                         button.setText("실행 - 4");
                         break;
@@ -49,6 +59,7 @@ public class ControlJavaActivity extends AppCompatActivity {
                         button.setText("실행");
                         break;
                 }
+
             }
         });
     }
